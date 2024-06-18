@@ -2,6 +2,18 @@ html body{
     height: 100%
 }
 
+@media screen and (min-width: 500px) {
+    body{font-size: 75%;}
+}
+
+@media screen and (min-width: 700px) {
+    body{font-size: 100%;}
+}
+
+:root {
+    --main-text-color: #FFFFFF;
+}
+
 .mainPageContainer {
     height: 100vh;
     width: 100vw;
@@ -26,7 +38,7 @@ html body{
 .sidebar > :first-child {
     display: grid;
     align-items: center;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 1f 2fr;
     grid-template-rows: 1fr;
 }
 
@@ -36,9 +48,9 @@ html body{
 }
 
 .sidebar > div >h1 {
-    padding: 10px;
-    font-size: 2.5em;
-    text-align: center;
+    color: var(--main-text-color);
+    font-size: 2.0vw;
+    text-align: start;
 }
 
 
