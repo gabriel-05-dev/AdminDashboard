@@ -31,6 +31,7 @@
     body{font-size: 100%;}
 }
 
+
 html body{
     height: 100vh;
     width: 100vw;
@@ -233,8 +234,6 @@ svg {
     justify-content: center;
     align-items: flex-start;
     margin-top: 10px;
-    height: 100%;
-    width: 100%;
 }
 
 .announcementsNav .announcementCard {
@@ -266,6 +265,9 @@ svg {
 }
 
 .announcement p {
+    font-size: 0.7em;
+}
+.announcement h4 {
     font-size: 0.7em;
 }
 
@@ -335,7 +337,7 @@ svg {
     align-items: flex-end;
     justify-content: flex-start;
     padding-left: 25px;
-    font-size: 1.2em;   
+    font-size: 1.2em;
     font-weight: 600;
 }
 
@@ -345,6 +347,7 @@ svg {
     padding-left: 20px;
     gap: 1vw;
     grid-template-columns: repeat(auto-fill, minmax(350px, 27vw));
+    overflow: scroll;
 }
 
 .dashboard .card {
@@ -371,14 +374,14 @@ svg {
     );}
 
 .dashboard .card .projectInfo {
-        padding: 20px;
+        padding: 10px;
         padding-left: 30px;
         padding-bottom: 0px;
         grid-row: 1/2;
         grid-column: 1/4;
         display: flex;
         flex-direction: column;
-        font-size: 0.9em;
+        font-size: 0.80em;
 }
 
 .dashboard .card .cardActions {
@@ -397,5 +400,11 @@ svg {
         height: 4vh;
         width: 10%;
 }
+
+.dashboard .card h3 {
+    font-size: 1.3em;
+    margin-bottom: 2px;
+}
+
 
 /* end of dashboard */
