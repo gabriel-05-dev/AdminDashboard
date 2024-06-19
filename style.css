@@ -302,7 +302,7 @@ svg {
     align-items: flex-end;
     justify-content: flex-start;
     padding-left: 25px;
-    font-size: 1.4em;
+    font-size: 1.2em;
     font-weight: 600;
 }
 
@@ -320,6 +320,10 @@ svg {
     height: 21vh;
     width: 350px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background: linear-gradient(to right,
+    #0ea5e9 2%,
+    white 0% 100%
+    );
 }
 
 /* end of dashboard */
