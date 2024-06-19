@@ -275,6 +275,7 @@ svg {
 /* start of trending section */
 
 .trendingNav {
+    padding-top: 20px;
     grid-column: 3/4;
     grid-row: 7/13;
     padding-right: 10px;
