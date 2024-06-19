@@ -18,16 +18,18 @@
   input, button, textarea, select {
     font: inherit;
   }
-  p, h1, h2, h3, h4, h5, h6 , button, input {
-    overflow-wrap: break-word;
-    font-family: "Lato", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  }
+
   #root, #__next {
     isolation: isolate;
   }
 
 
 /* end of reset */
+
+
+@media screen and (min-width: 1400px) {
+    body{font-size: 100%;}
+}
 
 html body{
     height: 100vh;
@@ -36,14 +38,14 @@ html body{
     padding: 0;
 }
 
+p, h1, h2, h3, h4, h5, h6 , button, input {
+    overflow-wrap: break-word;
+    font-family: "Lato", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+
 svg {
     height: 5vh;
     width: 10%;
-}
-
-
-@media screen and (min-width: 1400px) {
-    body{font-size: 100%;}
 }
 
 :root {
@@ -195,6 +197,11 @@ svg {
     color: var(--main-text-color);
 }
 
+.actionsContainer > button:hover {  
+    background-color: #0c6b96;
+    transition: 0.3s;
+}
+
 /* end of topbar */
 
 /* start of announcements section */
@@ -233,11 +240,33 @@ svg {
 .announcementsNav .announcementCard {
     grid-column: 1/2;
     grid-row: 2/3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 10px;
     background-color: white;
     border-radius: 12px;
-    height: 85%;
+    height: 94%;
     width: 90%;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.announcement {
+    height: 8vh;
+    width: 15vw;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.announcement:nth-child(3){
+    height: 9vh;
+    width: 15vw;
+    border-bottom: 0px;
+}
+
+.announcement p {
+    font-size: 0.7em;
 }
 
 /* end of announcements section */
@@ -287,6 +316,7 @@ svg {
 
 /* end of trending section */
 
+
 /*start of dashboard|*/
 
 .dashboard {
@@ -321,27 +351,36 @@ svg {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 0.5fr 1fr 0.5fr;
-    border-radius: 8px;
+    border-radius: 12px;
     height: 21vh;
     width: min(26vw, 27vw);
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     background: linear-gradient(to right,
-    #0ea5e9 2%,
+    #e9af0e 2%,
     white 0% 100%
     );}
 
-    .dashboard .card .projectInfo {
+.dashboard .card:hover {
+    transition: 0.3s;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 3px 8px;
+    background: linear-gradient(to right,
+    #d39b17 2%,
+    white 0% 100%
+    
+    );}
+
+.dashboard .card .projectInfo {
+        padding: 20px;
+        padding-left: 30px;
+        padding-bottom: 0px;
         grid-row: 1/2;
         grid-column: 1/4;
-        margin-left: 30px;
-        margin-right: 20px;
-        margin-top: 10px;
         display: flex;
         flex-direction: column;
         font-size: 0.9em;
-    }
+}
 
-    .dashboard .card .cardActions {
+.dashboard .card .cardActions {
         grid-row: 2/3;
         grid-column: 2/4;
         display: flex;
@@ -350,12 +389,12 @@ svg {
         align-items: flex-end;
         margin-right: 40px;
         
-    }
+}
 
     
-    .dashboard .card svg {
+.dashboard .card svg {
         height: 4vh;
         width: 10%;
-    }
+}
 
 /* end of dashboard */
