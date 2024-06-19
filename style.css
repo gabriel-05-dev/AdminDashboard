@@ -30,7 +30,10 @@
 /* end of reset */
 
 html body{
-    height: 100%
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
 }
 
 svg {
@@ -38,11 +41,8 @@ svg {
     width: 10%;
 }
 
-@media screen and (min-width: 500px) {
-    body{font-size: 75%;}
-}
 
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 1400px) {
     body{font-size: 100%;}
 }
 
@@ -51,8 +51,8 @@ svg {
 }
 /* this container defines the viewbox for the entire page, and the columns/rows used for the layout */
 .mainPageContainer {
-    height: 100vh;
-    width: 100vw;
+    height: 100%;
+    width: 100%;
     display: grid;
     grid-template-rows: 1fr 0.5fr repeat(8, 1fr);
     grid-template-columns: 1fr 3fr 1fr;
@@ -110,10 +110,16 @@ svg {
 
 }
 
+.topbar .searchContainer > svg {
+    width: 4%;
+    margin-right: 5px;
+
+}
+
 .topbar > .searchContainer > input {
     width: 40vw;
-    height: 4vh;
-    border-radius: 10px;
+    height: 3.5vh;
+    border-radius: 30px;
     border-style: none;
     background-color: #eaeaea;
 }
@@ -175,8 +181,8 @@ svg {
 }
 
 .actionsContainer > button {
-    height: 3.5vh;
-    width: 5vw;
+    height: 4vh;
+    width: 7vw;
     border-radius: 30px;
     border-style: none;
     background-color: #0ea5e9;
@@ -185,21 +191,68 @@ svg {
 
 /* end of topbar */
 
-/* start of trending section */
+/* start of announcements section */
 
-.trendingNav {
+.announcementsNav {
+    margin-top: 25px;
+    padding-right: 10px;
     grid-column: 3/4;
     grid-row: 3/7;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 0.8fr 10fr;
-    background-color: #a1a1aa;
+    grid-template-rows: 0.5fr 5fr;
+    background-color: #d6d3d1;
 }
+
+.announcementsNav > h2 {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    margin-left:1.5vw;
+    grid-column: 1/2;
+    grid-row: 1/2;
+    margin-top: 10px;
+    font-weight: 600;
+    font-size: 1.2em;
+}
+
+.announcementsNav .announcementsContainer {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 10px;
+    height: 90%;
+    width: 100%;
+}
+
+.announcementsNav .announcementCard {
+    grid-column: 1/2;
+    grid-row: 2/3;
+    background-color: white;
+    border-radius: 16px;
+    height: 85%;
+    width: 90%;
+}
+
+/* end of announcements section */
+
+
+/* start of trending section */
+
+.trendingNav {
+    padding-right: 10px;
+    grid-column: 3/4;
+    grid-row: 7/11;
+    background-color: #d6d3d1;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.5fr 5fr;
+}
+
 
 .trendingNav > h2 {
     display: flex;
     justify-content: flex-start;
-    align-items: center;
+    align-items: flex-end;
     margin-left:1.5vw;
     grid-column: 1/2;
     grid-row: 1/2;
@@ -211,31 +264,27 @@ svg {
 .trendingNav .trendingContainer {
     display: flex;
     justify-content: center;
-    align-items: center;
-    height: 100%;
+    align-items: flex-start;
+    margin-top: 10px;
+    height: 85%;
     width: 100%;
 }
 
-.trendingNav .announcementCard {
+.trendingNav .trendingCard {
     grid-column: 1/2;
     grid-row: 2/3;
     background-color: white;
     border-radius: 16px;
-    height: 85%;
+    height: 90%;
     width: 90%;
 }
 
+
+
 /* end of trending section */
 
-.announcementsNav {
-    grid-column: 3/4;
-    grid-row: 7/11;
-    background-color: #71717a;
-}
-
-
-
 .dashboard {
+    margin-top: 25px;
     grid-column: 2/3;
     grid-row: 3/11;
     background-color: #d6d3d1;
