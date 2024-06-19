@@ -1,5 +1,5 @@
 /*
-    CSS RESET & Specify Custom fonts aswell as backup fonts.
+    CSS RESET - For consistency across browsers/systems e.t.c
 */
 *, *::before, *::after {
     box-sizing: border-box;
@@ -28,9 +28,14 @@
 
 
 @media screen and (min-width: 1400px) {
-    body{font-size: 100%;}
+    body{font-size: 110%;}
 }
 
+@media only screen and (max-width: 1300px) {
+    body {
+      font-size: 100%;
+    }
+  }
 
 html body{
     height: 100vh;
@@ -65,27 +70,62 @@ svg {
 
 .sidebar {
     color: var(--main-text-color);
-    background-color: #0ea5e9;
+    background-color: #24abea;
     grid-row: 1/13;
-    grid-column: 1/2;
+    grid-column: 1/2;   
     display: grid;
-    grid-template-columns: 1fr 2fr;
     grid-template-rows: 2fr repeat(10, 1.5fr);
 }
 
 .sidebar .titleContainer {
-    margin-top: 20px;
     grid-column: 2/3;
-    padding: 10px;
 }
 
 .navButtons {
     grid-row: 2/10;
     grid-column: 2/3;
+    display: flex;
+    flex-direction: column;
 }
 
-.navButtons > p {
-    font-size: 1.4em;
+.svgCombiner > p {
+    font-size: 1.1em;
+    margin: 10px;
+}
+
+.svgCombiner {
+    display: flex;
+    flex-wrap: wrap;
+    align-items:flex-start;
+    justify-content: flex-start;
+    align-items: center;
+    height: 8vh;
+    width: 15vw;
+}
+
+#titleCombiner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    height: 14vh;
+    width: 15vw;
+}
+
+.svgCombiner > svg {
+    fill: #ffffff;
+    height: 5vh;
+    width: 15%;
+}
+
+.titleContainer > .svgCombiner >svg {
+    height: 15vh;
+    width: 25%;
+}
+
+.titleContainer > .svgCombiner >h1 {
+    margin-left: 20px;
+    font-size: 1.5em;
 }
 
 
